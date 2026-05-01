@@ -1,0 +1,8 @@
+import Header from "@/components/Header"
+
+export default function Carrinho(){
+    return(
+        <Header></Header>
+        
+    )
+}

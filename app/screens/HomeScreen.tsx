@@ -1,17 +1,18 @@
 import React from "react";
 import { View, Text, StyleSheet, FlatList } from "react-native";
 
-import Header from "../components/Header";
-import ProductCard from "../components/ProdutoCard";
-import { produtos } from "../data/produtos";
+import HomeHeader from "../../components/HomeHeader";
+import ProductCard from "../../components/ProdutoCard";
+import { produtos } from "../../data/produtos";
 import { theme } from "@/constants/Colors";
 import Categorias from "@/components/Categorias";
+import NavBar from "@/components/Navbar";
 
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Header />
+      <HomeHeader />
 
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Populares hoje</Text>
@@ -34,6 +35,8 @@ export default function HomeScreen() {
       </View>
 
       <Categorias onSelectCategory={(cat) => console.log(cat)} />
+
+        <NavBar></NavBar>
     </View>
   );
 }
